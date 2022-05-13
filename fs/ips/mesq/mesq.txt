@@ -1,0 +1,35 @@
+Functions involved in message q
+
+
+1)msgget();
+->creating and opening exixsting m.q
+2)msgsnd();
+->it is used for sending the message into message q
+3)msgrcvc();
+->recieve from message q
+4)msgctl();
+->doing some control operations.
+
+
+ipcs -q to display current MQ which are present in kernel
+
+ipcrm -Q key }
+             }==>to remove MQ.
+ipcrm -q id  }
+
+
+if we want to send message in MQ we need to declare a structure withthe fillowing general form
+
+
+struct mymsg{
+
+long mtype; /*Message type greater than zero*/
+
+char msg[20];
+
+};
+
+
+
+
+
