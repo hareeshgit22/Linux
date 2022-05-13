@@ -1,0 +1,67 @@
+Agenda
+What is process?
+What is multi processing.how many types.
+What is process management
+Foreground and background process in terminal
+Basic commands in process management
+Memory layout of process
+What is shell
+
+
+Process: A process is program in execution
+process is instance of program in execution. Whatever data present in hard disk is technically called as file.if that file has capability of getting executed,then it is called as program.copy of program present in the RAM is called as process
+
+concurrent:Before compilition of one process instructions  
+execution if another process gets the cpu time to execute such situation is called as concurrent execution.
+
+ps: is command to display the process which are present in current terminal.
+
+kill: is command to signal to a process
+
+kill -9 pid
+9 is forcefull kill
+
+
+Response time - The time gap between the process is loaded into the RAM and in first instruction executed by the CPU.Response time is less is good environment.
+
+Starvation time - A process in its life cycle how much starved without executing by CPUthis time is starvation time. starvation time is less good environment.
+
+ Turnaround time - Turnaround time is time gap between process is loaded into the RAM and its execution completed .Turnaround time less is good environment.
+
+Throughput - if the CPU is busy executing processes then work is being done. one measure of work is the number of processes that are completed per time unit called throughput. Througput is more is a good environment.
+
+State of process
+
+Running state: process executed by CPU.
+Ready state: process ready for execution but not being executed by CPU
+Delayed state:process intentionally goes to delay(use of sleep())
+wait state or blocked state: process waiting for an external event to finish (use of scanf())
+suspend state: process is suspended by some signal
+
+whenever a process is created it will goes to ready state.
+when ever any process comes out from wait state the time reset to 0.
+
+process control block:
+whenevr a process is created ,for every process PM(process manager) will creat a lookup table thats called process control block.
+
+
+when context switch happens?
+1)when time slice expire(or) time slot complete
+2)before time slice expire if process terminates by wait state and suspended state2)before time slice expire if process terminates by wait state and suspended state
+
+
+system();
+use: to execute shell commands
+--> we need to pass string base address.
+
+-->any process when it calls system() funtion, inside 2 more process are going to creat. one is the sh and another one is the command which we supplied. 
+
+
+-->if any process calling system().it will goto wait state till the command wich we supplied in system completes
+
+-->system() is blocking function
+
+-->In one process if we call 2 times system() to execute two comands both commands executs sequentially
+
+
+

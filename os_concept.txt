@@ -1,0 +1,48 @@
+Index:
+Process and process management
+Signal Handling
+File and File management
+IPC(Inter process communication)
+Process synchronization using semaphore
+Threads and multi threading
+Memory management
+
+
+
+Prerequisites-What you should Know
+what is os
+why os in Embedded systems
+why Linux
+what are the components of os
+Booting steps of os
+
+Step-1) BIOS-Basic Input Output system(is )
+check basic input output connections are connected or not
+checking bootable device
+
+Step-2) MBR-Master Boot Record
+it is located in the 1st sector of the bootable disk.
+MBR is less than 512 bytes in size.
+it contains information about GRUB.
+so in simple terms MBR loads and executes the GRUB boot loader.
+
+Step-3)GRUB-Grand Unified Bootloader 
+if you have multiple kernel images installed on your system ,you can choose which one to be excuted.
+GRUB displays a splash screen,waits for few seconds,if you dont enter anything,it loads the default kernel image as specied in the grub configuration file.
+
+Step-4)Kernel
+Mount the root file system.
+Kernel executes the /sbin/init program.
+In simple term we can say os is loaded into RAM.
+
+Step-5)Init
+since init was the 1st first program to be excuted by linux kernel,it has the proces id(PID) is 1.
+init identifies the default initlevel from /etc/inittab and uses that to load all appropriate program.
+
+step-6) Run Level Programs
+
+
+
+
+
+
